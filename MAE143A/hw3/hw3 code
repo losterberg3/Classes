@@ -1,0 +1,11 @@
+%problem 0
+%PID bode plot
+Fb=RR_tf ([1 101 100],[1 0]);
+RR_bode(Fb);
+%bandpass filter
+Fs=RR_tf ([1 0],[1 101 100]);
+RR_bode(Fs);
+%all pass filter
+Fp=RR_tf ([1 -1],[1 1]);
+RR_bode(Fp);
+%I plotted most by hand and checked my work
